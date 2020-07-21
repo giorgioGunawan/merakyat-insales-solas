@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+?>
+  <script> location.replace("loginpage.php"); </script><?php
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -16,7 +24,7 @@
     <li><a style="font-family:verdana;" href="visitor-log.html">Visitor Log In</a></li>
     <li><a style="font-family:verdana;" class = "active" href="visitor-sheet.html">Visitors Details</a></li>
     <li><a style="font-family:verdana;" href="loginpageemail.php">Contact Email</a></li>
-    <ri><a style="font-family:verdana;" href = "loginpage.php">Log Out</a></ri>
+    <ri><a style="font-family:verdana;" href = "logout.php">Log Out</a></ri>
 
     <!--ri><a style="font-family:verdana;" href = "index.php">Log Out</a></ri-->
     </ul>
@@ -26,7 +34,7 @@
    
 <div align="center" class="iframe-container">
 <iframe src="https://docs.google.com/spreadsheets/d/1C-CPDxPQN1vTQKsgtzeN-qc3bOp1BQM6bKEKyhhp2rg/htmlembed/sheet?gid=0&range=A1:F30" width="1130" height="410" frameborder="1" marginheight="0" marginwidth="0"> </iframe>
-   </div>
+  </div>
 
 
    

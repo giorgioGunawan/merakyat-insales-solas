@@ -1,3 +1,18 @@
+<?php
+        session_start();
+  	$val = trim($_POST['pass']);
+  	if($val == "123")
+  	{
+        $_SESSION["loggedin"] = true;
+  		//header("Location:fantastic4.dx.am/main.html");
+  		//exit();
+  		//exit(header("Location:www.fantastic4.dx.am/main.html"));
+                ?><script> location.replace("visitor-sheet.html"); </script><?php
+  	} elseif ($val != "123") {
+                 //echo "Retry, password is not correct.";
+        }
+        
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -46,21 +61,6 @@
 		<input margin-top = 100px align="center" type="submit" class="newvisitorbtn" title="Log In" name="login" value="Login">
     </div>
   </form>
-
-<?php
-  	$val = $_POST['pass'];
-  	if($val == "123")
-  	{
-  		//header("Location:fantastic4.dx.am/main.html");
-  		//exit();
-  		//exit(header("Location:www.fantastic4.dx.am/main.html"));
-                ?><script> location.replace("visitor-sheet.html"); </script><?php
-  	} elseif ($val != "123") {
-                 //echo "Retry, password is not correct.";
-        }
-        
-?>
-  
 </div>
 
 </body>
