@@ -1,1 +1,0 @@
-# merakyat-insales-solas
