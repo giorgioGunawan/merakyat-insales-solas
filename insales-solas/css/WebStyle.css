@@ -232,3 +232,7 @@ b {
 .merakyat-blue {
   background-color: #3262AE !important;
 }
+
+#login-page {
+  width: 500px;
+}
