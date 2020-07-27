@@ -1,23 +1,34 @@
 <!-- <?php
-session_start();
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-?>
-  <script> location.replace("loginpage.php"); </script><?php
-  exit;
-}
+  session_start();
+  if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    ?><script> location.replace("index.html"); </script><?php
+    exit;
+  }
 ?> -->
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
       <meta charset="utf-8">
-        <title>Monitoring</title>
-        <link rel="stylesheet" type="text/css" href="css/materialize.css" media="screen,projection"/>
-        <link rel="stylesheet" type="text/css" href="css/WebStyle.css">
+      <title>Monitoring</title>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" type="text/css" href="css/materialize.css" media="screen,projection"/>
+      <link rel="stylesheet" type="text/css" href="css/WebStyle.css">
   </head>
   <body>
-      <div class= "toptitle">
-          <img class = "left" src="logo.png" alt="logo" height="100">
+    <div class= "toptitle">
+      
+      <a href="index.html">
+        <img class = "left" src="logo.png" alt="logo" height="100">
+      </a>
+
+      <div class="card grey lighten-3 right" style="width: 10%;">
+        <p class="center" style="color: black;">
+          Hi, <?php echo $_SESSION["username"]?>
+        </p>
       </div>
+    </div>
       
       <br>
       <br>
