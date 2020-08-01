@@ -2,73 +2,76 @@
   session_start();
   $_SESSION['verifier'] = "";
   if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    ?><script> location.replace("index.html"); </script><?php
-    exit;
+	?><script> location.replace("index.html"); </script><?php
+	exit;
   }
 ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>Insales</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" type="text/css" href="css/materialize.css" media="screen,projection"/>
-    <link rel="stylesheet" type="text/css" href="css/WebStyle.css">
+	<meta charset="utf-8">
+	<title>Insales</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<link rel="stylesheet" type="text/css" href="css/materialize.css" media="screen,projection"/>
+	<link rel="stylesheet" type="text/css" href="css/WebStyle.css">
   </head>
   <body>
-    <div class= "toptitle">
-      <a href="logout.php">
-        <img class = "left" src="logo.png" alt="logo" height="100">
-      </a>
-       
-      <div class="card grey lighten-3 right" style="width: 10%;">
-        <p class="center" style="color: black;">
-          Hi, <?php echo $_SESSION["username"]?>
+	<div class= "toptitle">
+	  <a href="logout.php">
+		<img class = "left" src="logo.png" alt="logo" height="100">
+	  </a>
+	   
+	  <div class="card grey lighten-3 right" style="width: 10%;">
+		<p class="center" style="color: black;">
+		  Hi, <?php echo $_SESSION["username"]?>
+		</p>
+	  </div>
+	</div>
+	
+	<br>
+        <p style="padding-left: 5em;">
+            <a href="home.html" style="color: black;">Home</a> ->
         </p>
-      </div>
-    </div>
-    
-    <br>
-    <p style="padding-left: 5em;"><a href="home.html">Home</a> -></p>
+	<br>
    
-     <div class="row center-cols center-align" style = "margin-top: 50px;">
-       
-       <div class="col s4 push-s2">
-         <div class="card white">
-           <div class="card-content black-text">
-             <span class="card-title">CMS</span>
-               <p>I am a very simple card. I am good at containing small bits of information.
-               I am convenient because I require little markup to use effectively.</p><br>
-               <a class="waves-effect waves-light merakyat-blue btn" href="https://merakyatco.myapparea.com/user/app/formbuilder/559c2d3ef588">SELECT</a>
-            </div>
-          </div>
-        </div>
-       <div class="col s4 push-s2">
-         <div class="card white">
-           <div class="card-content black-text">
-             <span class="card-title">Monitoring</span>
-               <p>I am a very simple card. I am good at containing small bits of information.
-               I am convenient because I require little markup to use effectively.</p><br>
-               <a class="waves-effect waves-light merakyat-blue btn" href="monitoring.html">SELECT</a>
-            </div>
-          </div>
-        </div>
-        
-     </div>
-     <div class="row center-cols center-align" style = "margin-top: 50px;">
-     
-       <div class="col s4 push-s4">
-         <div class="card white">
-           <div class="card-content black-text">
-             <span class="card-title">Simposium</span>
-             <p>I am a very simple card. I am good at containing small bits of information.
-             I am convenient because I require little markup to use effectively.</p><br>
-             <a class="waves-effect waves-light merakyat-blue btn" href="simposium.html">SELECT</a>
-           </div>
-         </div>
-       </div>
-     </div>
+	 <div class="row center-cols center-align" style = "margin-top: 50px;">
+	   
+	   <div class="col s4 push-s2">
+		 <div class="card white">
+		   <div class="card-content black-text">
+			 <span class="card-title">CMS</span>
+			   <p>I am a very simple card. I am good at containing small bits of information.
+			   I am convenient because I require little markup to use effectively.</p><br>
+			   <a class="waves-effect waves-light merakyat-blue btn" href="https://merakyatco.myapparea.com/user/app/formbuilder/559c2d3ef588">SELECT</a>
+			</div>
+		  </div>
+		</div>
+	   <div class="col s4 push-s2">
+		 <div class="card white">
+		   <div class="card-content black-text">
+			 <span class="card-title">Monitoring</span>
+			   <p>I am a very simple card. I am good at containing small bits of information.
+			   I am convenient because I require little markup to use effectively.</p><br>
+			   <a class="waves-effect waves-light merakyat-blue btn" href="monitoring.html">SELECT</a>
+			</div>
+		  </div>
+		</div>
+		
+	 </div>
+	 <div class="row center-cols center-align" style = "margin-top: 50px;">
+	 
+	   <div class="col s4 push-s4">
+		 <div class="card white">
+		   <div class="card-content black-text">
+			 <span class="card-title">Simposium</span>
+			 <p>I am a very simple card. I am good at containing small bits of information.
+			 I am convenient because I require little markup to use effectively.</p><br>
+			 <a class="waves-effect waves-light merakyat-blue btn" href="simposium.html">SELECT</a>
+		   </div>
+		 </div>
+	   </div>
+	 </div>
    </body>
 </html>
