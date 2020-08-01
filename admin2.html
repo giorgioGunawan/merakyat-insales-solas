@@ -1,0 +1,43 @@
+<?php
+    session_start();
+    if ($_SESSION['verifier'] !== "admin2") {
+        ?><script> location.replace("simposium.html"); </script> <?php
+        exit;
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Simposium</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<link rel="stylesheet" type="text/css" href="css/materialize.css" media="screen,projection"/>
+		<link rel="stylesheet" type="text/css" href="css/WebStyle.css">
+	</head>
+	<body>
+        <div class= "toptitle">
+			
+			<a href="logout.php">
+				<img class = "left" src="logo.png" alt="logo" height="100">
+			</a>
+
+			<div class="card grey lighten-3 right" style="width: 10%;">
+				<p class="center" style="color: black;">
+					Hi, <?php echo $_SESSION["username"]?>
+				</p>
+			</div>
+        </div>
+        
+        <br>
+        <p style="padding-left: 5em;">
+            <a href="home.html" style="color: black;">Home</a> ->
+            <a href="simposium.html" style="color: black;"> Simposium</a> ->
+            <a href="admin2.html" style="color: black;"> Edit</a> ->
+        </p>
+		<br>
+
+        <h1>This page is for admin2.</h1>
+    </body>
+</html>

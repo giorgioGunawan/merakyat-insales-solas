@@ -1,16 +1,16 @@
 <?php
-// Initialize the session
-session_start();
- 
-// Unset all of the session variables
-$_SESSION = array();
- 
-// Destroy the session.
-session_destroy();
- 
-// Redirect to login page
-?>
-<script> location.replace("loginpage.php"); </script>
-<?php
-exit;
+    // Initialize the session
+    session_start();
+    
+    // Unset all of the session variables
+    $_SESSION = array();
+    
+    // Destroy the session.
+    session_destroy();
+    
+    // Redirect to login page
+    ?>
+    <script> location.replace("index.html"); </script>
+    <?php
+    exit;
 ?>

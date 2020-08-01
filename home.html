@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $_SESSION['verifier'] = "";
   if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     ?><script> location.replace("index.html"); </script><?php
     exit;
@@ -18,7 +19,7 @@
   </head>
   <body>
     <div class= "toptitle">
-      <a href="index.html">
+      <a href="logout.php">
         <img class = "left" src="logo.png" alt="logo" height="100">
       </a>
        
@@ -28,6 +29,9 @@
         </p>
       </div>
     </div>
+    
+    <br>
+    <p style="padding-left: 5em;"><a href="home.html">Home</a> -></p>
    
      <div class="row center-cols center-align" style = "margin-top: 50px;">
        
@@ -51,6 +55,20 @@
             </div>
           </div>
         </div>
+        
+     </div>
+     <div class="row center-cols center-align" style = "margin-top: 50px;">
+     
+       <div class="col s4 push-s4">
+         <div class="card white">
+           <div class="card-content black-text">
+             <span class="card-title">Simposium</span>
+             <p>I am a very simple card. I am good at containing small bits of information.
+             I am convenient because I require little markup to use effectively.</p><br>
+             <a class="waves-effect waves-light merakyat-blue btn" href="simposium.html">SELECT</a>
+           </div>
+         </div>
+       </div>
      </div>
    </body>
 </html>

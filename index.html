@@ -1,70 +1,69 @@
 <?php
-  session_start();
-  $_SESSION["loggedin"] = false;
-  if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    ?><script> location.replace("home.html"); </script><?php
-    exit;
-  }
+	session_start();
+	if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+		?><script> location.replace("home.html"); </script><?php
+		exit;
+	}
 
-  $username = $password = "";
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+	$username = $password = "";
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+	$_SESSION['verifier'] = "";
 
-  if ( ($username == "admin") && ($password == "password") ) {
-    session_start();
-    $_SESSION['loggedin'] = true;
-    $_SESSION['username'] = $username;
-    ?><script> location.replace("home.html"); </script><?php
-  } else {
-    $username_err = "The username you entered was not valid.";
-  }
+	if ( ($username == "admin") && ($password == "password") ) {
+		session_start();
+		$_SESSION['loggedin'] = true;
+		$_SESSION['username'] = $username;
+		?><script> location.replace("home.html"); </script><?php
+	} else {
+		$username_err = "The username you entered was not valid.";
+	}
 ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>Insales</title>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <link rel="stylesheet" type="text/css" href="css/materialize.css" media="screen,projection"/>
-      <link rel="stylesheet" type="text/css" href="css/WebStyle.css">
-   </head>
-   <body>
-     <a href="index.html">
-       <div class= "toptitle">
-         <img class = "left" src="logo.png" alt="logo" height="100">
-       </div>
-     </a>
-     
-     <br>
+	<head>
+		<meta charset="utf-8">
+			<title>Insales</title>
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+			<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+			<link rel="stylesheet" type="text/css" href="css/materialize.css" media="screen,projection"/>
+			<link rel="stylesheet" type="text/css" href="css/WebStyle.css">
+	</head>
+	<body>
+		<a href="logout.php">
+			<div class= "toptitle">
+				<img class = "left" src="logo.png" alt="logo" height="100">
+			</div>
+		</a>
+		 
+		<br>
 
-     <div id="login-page" class="row">
-        <div class="col s4 push-s4 z-depth-6 card-panel">
-          <form class="login-form" method="post" action=" ">
-            <div class="row">
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">people</i>
-                <input class="validate" id="username" type="text" name="username" placeholder="Username">
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">lock_outline</i>
-                <input id="password" type="password" name="password" placeholder="Password">
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s6 push-s3">
-                <input type="submit" title="Log In" name="login" value="Login" class="btn waves-effect waves-light col s12">
-              </div>
-            </div>
-    
-          </form>
-        </div>
-      </div>
+		<div id="login-page" class="row">
+			<div class="col s4 push-s4 z-depth-6 card-panel">
+				<form class="login-form" method="post" action=" ">
+					<br>
+					<div class="row">
+						<div class="input-field col s12">
+							<i class="material-icons prefix">people</i>
+							<input class="validate" id="username" type="text" name="username" placeholder="Username">
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<i class="material-icons prefix">lock_outline</i>
+							<input id="password" type="password" name="password" placeholder="Password">
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s6 push-s3">
+							<input type="submit" title="Log In" name="login" value="Login" class="btn waves-effect waves-light col s12 merakyat-blue">
+						</div>
+					</div>
+		
+				</form>
+			</div>
+		</div>
 
-   </body>
+	 </body>
 </html>
