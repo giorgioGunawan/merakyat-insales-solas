@@ -24,19 +24,21 @@
 				<img class = "left" src="logo.png" alt="logo" height="100">
 			</a>
 
-			<div class="card grey lighten-3 right" style="width: 10%;">
-				<p class="center" style="color: black;">
-					Hi, <?php echo $_SESSION["username"]?>
-				</p>
-			</div>
+			<a href="logout.php" style="height: 50px;">
+				<div class="card grey lighten-3 right" style="width: 10%;">
+					<p class="center black-text">Logout</p>
+				</div>
+			</a>
 		</div>
 		
-		<br>
-			<p style="padding-left: 5em;">
-				<a href="home.html" style="color: black;">Home</a> ->
-				<a href="monitoring.html" style="color: black;"> Monitoring</a> ->
-			</p>
-		<br>
+		<nav class="white no-shadows">
+			<div class="nav-wrapper">
+				<div class="col s12">
+					<a href="home.html" class="breadcrumb">Home</a>
+					<a href="monitoring.html" class="breadcrumb">Monitoring</a>
+				</div>
+			</div>
+		</nav>
 		
 		<br>
 		<div class="row">
